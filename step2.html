@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms!</title>
+    <style>
+        :root{--space:1.25rem;}
+        body{font-family: Arial, Helvetica, sans-serif;padding:2rem;line-height:1.4;background:#fff}
+        fieldset{margin:0 0 var(--space) 0;padding:0.75rem;border-radius:6px;border:1px solid #ddd;max-width:520px}
+        form{max-width:520px}
+        label{display:block;margin:0 0 0.75rem 0;font-weight:600}
+        /* keep radio/checkbox labels inline */
+        input[type="radio"] + label, input[type="checkbox"] + label{display:inline-block;margin-right:1rem;margin-bottom:0.75rem}
+        input[type="text"], input[type="email"], input[type="password"], select, button{display:block;width:100%;max-width:520px;padding:0.5rem;border:1px solid #ccc;border-radius:4px;margin-bottom:0.5rem}
+        input[type="radio"], input[type="checkbox"]{margin-right:0.5rem}
+        .inline-group{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center}
+        button{width:fit-content;background:#1976d2;color:#fff;border:none}
+    </style>
+</head>
+<body>
+    <h1>My Form</h1>
+    <fieldset>
+        <legend>ACCOUNT</legend>
+        <form action="index.html" method="get">
+            <h2>Email</h2>
+            <label for="email"></label>
+            <input type="email" id="email" name="email" required placeholder="Type your email"> <br />
+            <h2>Password</h2>
+            <label for="password"></label>
+            <input type="password" id="password" name="password" required minlength="6" placeholder="Type a password"> <br />
+            <h2>Confirm Password</h2>
+            <label for="confirm_password"></label>
+            <input type="password" id="confirm_password" name="confirm_password" required minlength="6" placeholder="Confirm your password"> <br />
+            <div style="display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap;">
+                <button type="button" onclick="location.href='../index.html'" style="background:none;border:none;padding:0;margin:0;cursor:pointer;" aria-label="Go back">
+                    <img src="../assets/back.svg" alt="Back" style="max-width:160px;width:100%;height:auto;display:block;" />
+                </button>
+                <button type="submit" style="background:none;border:none;padding:0;margin:0;">
+                    <img src="../assets/next.svg" alt="Next" style="max-width:160px;width:100%;height:auto;display:block;" />
+                </button>
+            </div>
+        </form>
+    </fieldset>
+</body>
+</html>

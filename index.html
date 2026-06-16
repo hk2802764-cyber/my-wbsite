@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 3: Your Review</title>
+    <style>
+        :root{--space:1.25rem;}
+        body{font-family: Arial, Helvetica, sans-serif;padding:2rem;line-height:1.4;background:#fff}
+        fieldset{margin:0 0 var(--space) 0;padding:0.75rem;border-radius:6px;border:1px solid #ddd;max-width:520px}
+        form{max-width:520px}
+        label{display:block;margin:0 0 0.75rem 0;font-weight:600}
+        input[type="text"], input[type="email"], input[type="password"], input[type="file"], select, textarea, button{display:block;width:100%;max-width:520px;padding:0.5rem;border:1px solid #ccc;border-radius:4px;margin-bottom:0.5rem}
+        textarea{min-height:120px;resize:vertical}
+        input[type="radio"], input[type="checkbox"]{margin-right:0.5rem}
+        .inline-group{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center}
+        button{width:fit-content;background:#1976d2;color:#fff;border:none}
+    </style>
+</head>
+<body>
+    <div style="max-width:520px;margin:0 auto;">
+        <h1>Your Review</h1>
+        <fieldset>
+            <legend>REVIEW</legend>
+            <form action="../done.html" method="get">
+                <h2>How did you hear about us?</h2>
+            <label for="source"></label>
+            <select id="source" name="source" required>
+                <option value="" disabled selected>Select your option</option>
+                <option value="search">our website</option>
+                <option value="social">Social Media</option>
+                <option value="friend">Friend / family member</option>
+                <option value="other">Other</option>
+            </select>
+
+            <h2>Would you like to join us?</h2>
+            <div class="inline-group">
+                <label><input type="radio" name="join us" value="yes" required> Yes</label>
+                <label><input type="radio" name="join us" value="no"> No</label>
+                <label><input type="radio" name="join us" value="maybe"> Maybe</label>
+            </div>
+
+            <h2>Comments</h2>
+            <label for="comments"></label>
+            <textarea id="comments" name="comments" placeholder="Enter your comments here..."></textarea>
+
+            <h2>Documents</h2>
+            <label for="documents"></label>
+            <input type="file" id="documents" name="documents">
+
+            <div style="display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap;">
+                <button type="button" onclick="location.href='step2.html'" style="background:none;border:none;padding:0;margin:0;cursor:pointer;" aria-label="Go back">
+                    <img src="../assets/back.svg" alt="Back" style="max-width:160px;width:100%;height:auto;display:block;" />
+                </button>
+                <button type="submit" style="background:none;border:none;padding:0;margin:0;">
+                    <img src="../assets/next.svg" alt="Next" style="max-width:160px;width:100%;height:auto;display:block;" />
+                </button>
+            </div>
+        </form>
+    </fieldset>
+</body>
+</html>
